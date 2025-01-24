@@ -6,21 +6,13 @@
       type="text"
       placeholder="Paste message to decode..."
       class="decoder-input"
-      :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)"
+      v-model="modelValue"
     />
   </div>
 </template>
 
 <script setup>
-const props = defineProps({
-  modelValue: {
-    type: String,
-    required: true
-  }
-});
-
-defineEmits(['update:modelValue']);
+const modelValue = defineModel();
 </script>
 
 <style scoped>

@@ -1,10 +1,7 @@
 <template>
   <div class="decoder-input">
     <AlienMessage />
-    <DecoderInput
-      :model-value="modelValue"
-      @update:model-value="$emit('update:modelValue', $event)"
-    />
+    <DecoderInput v-model="modelValue"/>
   </div>
 </template>
 
@@ -13,14 +10,7 @@ import { ref } from 'vue';
 import AlienMessage from './AlienMessage.vue';
 import DecoderInput from './DecoderInput.vue';
 
-const props = defineProps({
-  modelValue: {
-    type: String,
-    required: true
-  }
-});
-
-defineEmits(['update:modelValue']);
+const modelValue = defineModel();
 </script>
 
 <style scoped>
