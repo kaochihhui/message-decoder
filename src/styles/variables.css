@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #6c63ff;
+  --primary-danger: red;
+  --primary-hover: #5a52d5;
+  --primary-shadow: rgba(108, 99, 255, 0.3);
+  --text-color: #e0e0e0;
+  --background-primary: #13111c;
+  --background-secondary: #1a1b2e;
+  --input-background: rgba(108, 99, 255, 0.1);
+  --placeholder-color: rgba(255, 255, 255, 0.6);
+}
