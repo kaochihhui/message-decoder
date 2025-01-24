@@ -6,11 +6,22 @@
       type="text"
       placeholder="Paste message to decode..."
       class="decoder-input"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
     />
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  modelValue: {
+    type: String,
+    required: true
+  }
+});
+
+defineEmits(['update:modelValue']);
+</script>
 
 <style scoped>
 .decoder-wrapper {
